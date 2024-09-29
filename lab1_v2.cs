@@ -160,6 +160,7 @@ namespace lab1
 
             result5 = (diminutive - eductible) / denominator;
             Console.WriteLine($"1) результат через тип double = {result5}");
+            Console.WriteLine($"Уменьшаемое = {diminutive}, вычитаемое = {eductible}, знаменатель = {denominator}\n");
 
             float af = 1000, bf = 0.0001f, result5f;
             float diminutiveF = (float)(Math.Pow(af - bf, 2));
@@ -168,6 +169,7 @@ namespace lab1
                 
             result5f = ((diminutiveF - eductibleF) / denominatorF);
             Console.WriteLine($"2) результат через тип flout = {result5f}");
+            Console.WriteLine($"Уменьшаемое = {diminutiveF}, вычитаемое = {eductibleF}, знаменатель = {denominatorF}");
 
 
 
