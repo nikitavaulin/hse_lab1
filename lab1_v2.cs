@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,7 @@ namespace lab1
                     didParse = int.TryParse(buffer, out inputNum);
                     if (didParse == false)
                     {
-                        Console.WriteLine("Ошибка преобразования строки");
+                        Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
                     }
                 } while (!didParse);
                 Console.WriteLine($"Считано число {varName} = {inputNum}");
@@ -58,7 +58,7 @@ namespace lab1
                         didParse = double.TryParse(buffer, out inputNum);
 
                         if (didParse == false)
-                            Console.WriteLine("Ошибка преобразования строки");
+                            Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
 
                     } while (!didParse);
 
@@ -78,10 +78,10 @@ namespace lab1
                         isValid = didParse && (Math.Pow(inputNum, 3) - inputNum) != 0;
 
                         if (didParse == false)
-                            Console.WriteLine("Ошибка преобразования строки");
+                            Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
                        
                         if (isValid == false && didParse)
-                            Console.WriteLine("Х не удовлетворяет условию ОДЗ");
+                            Console.WriteLine($"{varName} не удовлетворяет условию ОДЗ");
 
                     } while (!didParse || isValid == false);
                     Console.WriteLine($"Считано число {varName} = {inputNum}");
