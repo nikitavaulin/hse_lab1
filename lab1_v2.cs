@@ -45,7 +45,7 @@ namespace lab1
                 double inputNum;
 
                 //  нужна ли проверка ОДЗ
-                if (isValidCheckNeed == false)      
+                if (!isValidCheckNeed)      
                 {
                     do
                     {
@@ -57,7 +57,7 @@ namespace lab1
 
                         didParse = double.TryParse(buffer, out inputNum);
 
-                        if (didParse == false)
+                        if (!didParse)
                             Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
 
                     } while (!didParse);
@@ -77,10 +77,10 @@ namespace lab1
                         didParse = double.TryParse(buffer, out inputNum);
                         isValid = didParse && (Math.Pow(inputNum, 3) - inputNum) != 0;
 
-                        if (didParse == false)
+                        if (!didParse)
                             Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
                        
-                        if (isValid == false && didParse)
+                        if (!isValid && didParse)
                             Console.WriteLine($"{varName} не удовлетворяет условию ОДЗ");
 
                     } while (!didParse || isValid == false);
