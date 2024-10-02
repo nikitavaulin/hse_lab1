@@ -26,7 +26,7 @@ namespace lab1
                         buffer = Console.ReadLine();
                     }
                     didParse = int.TryParse(buffer, out inputNum);
-                    if (didParse == false)
+                    if (!didParse)
                     {
                         Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
                     }
@@ -45,7 +45,7 @@ namespace lab1
                 double inputNum;
 
                 //  нужна ли проверка ОДЗ
-                if (!isValidCheckNeed)      
+                if (!isValidCheckNeed)
                 {
                     do
                     {
@@ -79,11 +79,11 @@ namespace lab1
 
                         if (!didParse)
                             Console.WriteLine("Ошибка преобразования строки в число. Повторите ввод");
-                       
+
                         if (!isValid && didParse)
                             Console.WriteLine($"{varName} не удовлетворяет условию ОДЗ");
 
-                    } while (!didParse || isValid == false);
+                    } while (!didParse || !isValid);
                     Console.WriteLine($"Считано число {varName} = {inputNum}");
                     return inputNum;
                 }
@@ -123,12 +123,12 @@ namespace lab1
 
             Console.WriteLine();
 
-            result4 = x + 1 / (Math.Pow(x,3) - x) - 2;
+            result4 = x + 1 / (Math.Pow(x, 3) - x) - 2;
             Console.WriteLine($"4) x + 1/(x^3-x) - 2 = {result4}");
 
             Console.WriteLine();
 
-            
+
             // Task 2 -------------------------------------------------------------------------
             Console.WriteLine("Task 2 ---------------------------------");
 
@@ -140,9 +140,9 @@ namespace lab1
             Console.WriteLine();
 
             bool inRange = (-7 <= X) && (X <= 0) && (-2 <= Y) && (Y <= 0);
-            if (inRange) 
+            if (inRange)
                 Console.WriteLine($"Ваша точка ({X};{Y}) принадлежит заштрихованной области");
-            else 
+            else
                 Console.WriteLine($"Ваша точка ({X};{Y}) не принадлежит заштрихованной области");
 
             Console.WriteLine();
@@ -166,7 +166,7 @@ namespace lab1
             float diminutiveF = (float)(Math.Pow(af - bf, 2));
             float eductibleF = (float)(Math.Pow(af, 2) + 2 * af * bf);
             float denominatorF = (float)(Math.Pow(bf, 2));
-                
+
             result5f = ((diminutiveF - eductibleF) / denominatorF);
             Console.WriteLine($"2) результат через тип flout = {result5f}");
             Console.WriteLine($"Уменьшаемое = {diminutiveF}, вычитаемое = {eductibleF}, знаменатель = {denominatorF}");
