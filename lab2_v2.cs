@@ -141,11 +141,11 @@ namespace lab1
             Console.WriteLine("\nTask 3 \n----------------------------");
 
             Console.WriteLine("Введите, пожалуйста, длину послед-ти нечётных чисел\n");
-            int n_task3 = ParsingIntVar("n");
+            int nTask3 = ParsingIntVar("n");
             int oddNumber = 1;
 
-            Console.WriteLine($"Последовательность нечётных чисел длиной {n_task3}:");
-            for (int i = 0; i < n_task3; i++)
+            Console.WriteLine($"Последовательность нечётных чисел длиной {nTask3}:");
+            for (int i = 0; i < nTask3; i++)
             {
                 Console.Write($"{oddNumber} ");
                 oddNumber += 2;
