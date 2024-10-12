@@ -12,7 +12,7 @@ namespace lab1
         /// <summary>
         /// Метод считывания введенных пользователем целых чисел 
         /// </summary>
-        /// <param name="varName">имя переменной</param>
+        /// <param name = "varName" > имя переменной</param>
         /// <returns>значение введенной переменной с типом int</returns>
         static int ParsingIntVar(string varName)
         {
@@ -143,13 +143,17 @@ namespace lab1
             Console.WriteLine("Введите, пожалуйста, длину послед-ти нечётных чисел\n");
             int nTask3 = ParsingIntVar("n");
             int oddNumber = 1;
+            int sumOddNums = 0;
 
             Console.WriteLine($"Последовательность нечётных чисел длиной {nTask3}:");
             for (int i = 0; i < nTask3; i++)
             {
                 Console.Write($"{oddNumber} ");
+                sumOddNums += oddNumber;
                 oddNumber += 2;
             }
+
+            Console.WriteLine($"\nСумма первых {nTask3} элементов последовательности нечетных чисел = {sumOddNums}");
 
             Console.WriteLine("\nНажмити любую кнопку, чтобы продолжить...");
             Console.ReadKey();
